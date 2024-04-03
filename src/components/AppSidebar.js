@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import {
   CCloseButton,
+  CCardImage,
   CSidebar,
   CSidebarBrand,
   CSidebarFooter,
@@ -15,6 +16,8 @@ import { AppSidebarNav } from './AppSidebarNav'
 
 import { logo } from 'src/assets/brand/logo'
 import { sygnet } from 'src/assets/brand/sygnet'
+
+import ReactImg from 'src/assets/brand/logo.png'
 
 // sidebar nav config
 import navigation from '../_nav'
@@ -39,6 +42,7 @@ const AppSidebar = () => {
         <CSidebarBrand to="/">
           <CIcon customClassName="sidebar-brand-full" icon={logo} height={32} />
           <CIcon customClassName="sidebar-brand-narrow" icon={sygnet} height={32} />
+          <CCardImage orientation="top" src={ReactImg} height={50}/>
         </CSidebarBrand>
         <CCloseButton
           className="d-lg-none"
