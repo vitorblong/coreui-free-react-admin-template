@@ -22,6 +22,7 @@ import {
 import { DocsExample } from 'src/components'
 
 import ReactImg from 'src/assets/images/react.jpg'
+import WidgetsDropdown from '../../widgets/WidgetsDropdown'
 
 const Cards = () => {
   return (
@@ -31,6 +32,7 @@ const Cards = () => {
           <CCardHeader>
             <strong>Card</strong> <small>Example</small>
           </CCardHeader>
+          <WidgetsDropdown className="mb-4" />
           <CCardBody>
             <p className="text-body-secondary small">
               Cards are built with as little markup and styles as possible but still manage to
