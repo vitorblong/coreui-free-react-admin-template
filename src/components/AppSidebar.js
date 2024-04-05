@@ -3,13 +3,12 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import {
   CCloseButton,
-  CCardImage,
+  CLink,
   CSidebar,
   CSidebarBrand,
   CSidebarFooter,
   CSidebarHeader,
   CSidebarToggler,
-  CLink,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
@@ -39,12 +38,10 @@ const AppSidebar = () => {
     >
       <CSidebarHeader className="border-bottom">
 
-        <CLink href={'/'}>
-          <CSidebarBrand to="/">
-            <CIcon customClassName="sidebar-brand-full" icon={logo} height={32} />
-            <CIcon customClassName="sidebar-brand-narrow" icon={sygnet} height={32} />
-          </CSidebarBrand>
-        </CLink>
+        <CSidebarBrand href={'/'}>
+          <CIcon customClassName="sidebar-brand-full" icon={logo} height={32} />
+          <CIcon customClassName="sidebar-brand-narrow" icon={sygnet} height={32} />
+        </CSidebarBrand>
 
         <CCloseButton
           className="d-lg-none"
