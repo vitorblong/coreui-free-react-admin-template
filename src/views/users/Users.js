@@ -30,7 +30,7 @@ const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    api.get("/users").then((response) => setUsers(response.data))
+    api.get("/tenant-user/all").then((response) => setUsers(response.data))
       .catch((err) => {
         console.error("Oops! An error occurred: " + err);
       });
@@ -77,7 +77,7 @@ const Users = () => {
                     <CTableDataCell>{user.email}</CTableDataCell>
                     <CTableDataCell>
                       <CButton>
-                        <CIcon icon={cilCloudDownload} />
+                        <CIcon icon={cilPencil} />
                       </CButton>
                     </CTableDataCell>
                   </CTableRow>
