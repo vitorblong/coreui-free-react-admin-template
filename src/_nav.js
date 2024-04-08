@@ -78,27 +78,26 @@ const _nav = [
       },
     ],
   },
-  ,
+  {
+    component: CNavItem,
+    name: 'Customers',
+    to: '/customers',
+    icon: <CIcon icon={cilSitemap} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Settings',
+    to: '/settings',
+    icon: <CIcon icon={cilSettings} customClassName="nav-icon" />,
+  },
   {
     component: CNavTitle,
     name: 'Outhers',
   },
   {
     component: CNavItem,
-    name: 'Table',
-    to: '/table',
-    icon: <CIcon icon={cilViewColumn} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
-    name: 'Form',
-    to: '/form',
-    icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
     name: 'About',
-    to: '/theme/typography',
+    to: '/about',
     icon: <CIcon icon={cilInfo} customClassName="nav-icon" />,
   },
 ]

@@ -1,10 +1,19 @@
 import React from 'react'
 
-const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
-const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
-const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 
-// Base
+
+// Customers
+const Customers = React.lazy(() => import('./views/customers/Customers'))
+const CustomersEdit = React.lazy(() => import('./views/customers/edit/CustomerEdit'))
+
+// Setting
+const Setting = React.lazy(() => import('./views/settings/Settings'))
+
+//About
+const About = React.lazy(() => import('./views/about/About'))
+
+
+
 const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
 const Breadcrumbs = React.lazy(() => import('./views/base/breadcrumbs/Breadcrumbs'))
 const Cards = React.lazy(() => import('./views/base/cards/Cards'))
@@ -17,13 +26,21 @@ const Placeholders = React.lazy(() => import('./views/base/placeholders/Placehol
 const Popovers = React.lazy(() => import('./views/base/popovers/Popovers'))
 const Progress = React.lazy(() => import('./views/base/progress/Progress'))
 const Spinners = React.lazy(() => import('./views/base/spinners/Spinners'))
-const Table = React.lazy(() => import('./views/tables/Tables'))
+
 const Tooltips = React.lazy(() => import('./views/base/tooltips/Tooltips'))
+
+
+
 
 // Buttons
 const Buttons = React.lazy(() => import('./views/buttons/buttons/Buttons'))
 const ButtonGroups = React.lazy(() => import('./views/buttons/button-groups/ButtonGroups'))
 const Dropdowns = React.lazy(() => import('./views/buttons/dropdowns/Dropdowns'))
+
+
+const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
+const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
+const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 
 //Forms
 const ChecksRadios = React.lazy(() => import('./views/forms/checks-radios/ChecksRadios'))
@@ -34,7 +51,7 @@ const Layout = React.lazy(() => import('./views/forms/layout/Layout'))
 const Range = React.lazy(() => import('./views/forms/range/Range'))
 const Select = React.lazy(() => import('./views/forms/select/Select'))
 const Validation = React.lazy(() => import('./views/forms/validation/Validation'))
-const Form = React.lazy(() => import('./views/form/Form'))
+
 
 const Charts = React.lazy(() => import('./views/charts/Charts'))
 
@@ -54,6 +71,23 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
+
+
+  //Customers
+  { path: '/customers', name: 'Customers', element: Customers },
+  { path: '/customers/edit', name: 'Edit', element: CustomersEdit },
+
+  //Settings
+  { path: '/settings', name: 'Settings', element: Setting },
+
+  //About
+  { path: '/about', name: 'About', element: About },
+
+
+
+
+
+
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
   { path: '/theme/typography', name: 'Typography', element: Typography },
@@ -70,8 +104,6 @@ const routes = [
   { path: '/base/popovers', name: 'Popovers', element: Popovers },
   { path: '/base/progress', name: 'Progress', element: Progress },
   { path: '/base/spinners', name: 'Spinners', element: Spinners },
-  { path: '/table', name: 'Table', element: Table },
-  { path: '/form', name: 'Form', element: Form },
   { path: '/base/tooltips', name: 'Tooltips', element: Tooltips },
   { path: '/buttons', name: 'Buttons', element: Buttons, exact: true },
   { path: '/buttons/buttons', name: 'Buttons', element: Buttons },
