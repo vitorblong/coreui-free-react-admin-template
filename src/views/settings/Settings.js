@@ -19,16 +19,11 @@ const Settings = () => {
       <CCol xs={12}>
         <CCard className="mb-4">
           <CCardHeader>
-            <strong>React Floating labels</strong> <small>Textareas</small>
+            <strong>Settings</strong>
           </CCardHeader>
           <CCardBody>
             <p className="text-body-secondary small">
-              Wrap a pair of <code>&lt;CFormInput&gt;</code> and <code>&lt;CFormLabel&gt;</code>{' '}
-              elements in <code>CFormFloating</code> to enable floating labels with textual form
-              fields. A <code>placeholder</code> is required on each <code>&lt;CFormInput&gt;</code>{' '}
-              as our method of CSS-only floating labels uses the <code>:placeholder-shown</code>{' '}
-              pseudo-element. Also note that the <code>&lt;CFormInput&gt;</code> must come first so
-              we can utilize a sibling selector (e.g., <code>~</code>).
+              Settings
             </p>
             <DocsExample href="forms/floating-labels">
               <CFormFloating className="mb-3">
@@ -44,17 +39,6 @@ const Settings = () => {
               When there&#39;s a <code>value</code> already defined, <code>&lt;CFormLabel&gt;</code>
               s will automatically adjust to their floated position.
             </p>
-            <DocsExample href="forms/floating-labels">
-              <CFormFloating>
-                <CFormInput
-                  type="email"
-                  id="floatingInputValue"
-                  placeholder="name@example.com"
-                  defaultValue="test@example.com"
-                />
-                <CFormLabel htmlFor="floatingInputValue">Input with value</CFormLabel>
-              </CFormFloating>
-            </DocsExample>
           </CCardBody>
         </CCard>
       </CCol>

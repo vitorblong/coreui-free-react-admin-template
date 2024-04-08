@@ -25,12 +25,12 @@ import {
 import ModalDelete from '../../components/modal/ModalDelete'
 import Pagination from '../../components/pagination/ModalDelete'
 
-const Customers = () => {
+const Licenses = () => {
 
-  const [customers, setCustomers] = useState([]);
+  const [licenses, setLicenses] = useState([]);
 
   useEffect(() => {
-    api.get("/customers").then((response) => setCustomers(response.data))
+    api.get("/licenses").then((response) => setLicenses(response.data))
       .catch((err) => {
         console.error("Oops! An error occurred: " + err);
       });
@@ -41,17 +41,17 @@ const Customers = () => {
       <CCol xs={12}>
         <CCard className="mb-4">
           <CCardHeader>
-            <strong>Customers</strong>
+            <strong>Licenses</strong>
           </CCardHeader>
           <CCardBody>
             <CForm>
               <CRow>
                 <CFormLabel htmlFor="search">Company: </CFormLabel>
                 <CCol sm={4}>
-                  <CFormInput  id="search" />
+                  <CFormInput id="search" />
                 </CCol>
                 <CButton color="light" className="col-sm-1 col-form-label">Search</CButton>
-                <CButton color="primary" href='/customers/edit' className="col-sm-1 col-form-label ms-3">New</CButton>
+                <CButton color="primary" href='/licenses/edit' className="col-sm-1 col-form-label ms-3">New</CButton>
               </CRow>
             </CForm>
 
@@ -59,19 +59,18 @@ const Customers = () => {
             <CTable striped>
               <CTableHead>
                 <CTableRow>
-                  <CTableHeaderCell scope="col">Contact</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Id</CTableHeaderCell>
                   <CTableHeaderCell scope="col">Company</CTableHeaderCell>
-                  <CTableHeaderCell scope="col">Phone</CTableHeaderCell>
-                  <CTableHeaderCell scope="col">Email</CTableHeaderCell>
-                  <CTableHeaderCell scope="col">Registration</CTableHeaderCell>
-                  <CTableHeaderCell scope="col">Status</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Max Users</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Date Start</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Date End</CTableHeaderCell>
                   <CTableHeaderCell scope="col">Edit</CTableHeaderCell>
                   <CTableHeaderCell scope="col">Delete</CTableHeaderCell>
                 </CTableRow>
               </CTableHead>
               <CTableBody>
 
-                {customers.map(user => (
+                {licenses.map(user => (
                   <CTableRow key={user.email}>
                     <CTableDataCell>{user.name}</CTableDataCell>
                     <CTableDataCell>{user.last_name}</CTableDataCell>
@@ -85,12 +84,11 @@ const Customers = () => {
                 ))}
 
                 <CTableRow>
-                  <CTableDataCell>Vitor</CTableDataCell>
+                  <CTableDataCell>1</CTableDataCell>
                   <CTableDataCell>Abb International</CTableDataCell>
-                  <CTableDataCell>786 281 2612</CTableDataCell>
-                  <CTableDataCell>vitor@blong.com.br</CTableDataCell>
+                  <CTableDataCell>100</CTableDataCell>
                   <CTableDataCell>04/08/2024</CTableDataCell>
-                  <CTableDataCell>Active</CTableDataCell>
+                  <CTableDataCell>04/08/2024</CTableDataCell>
                   <CTableDataCell>
                     <CButton href="customers/edit">
                       <CIcon icon={cilPencil} />
@@ -110,4 +108,4 @@ const Customers = () => {
   )
 }
 
-export default Customers
+export default Licenses

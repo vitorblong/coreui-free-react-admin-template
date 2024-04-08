@@ -12,13 +12,13 @@ import {
   CRow,
 } from '@coreui/react'
 
-const CustomerEdit = () => {
+const InvoicesEdit = () => {
   return (
     <CRow>
       <CCol xs={12}>
         <CCard className="mb-4">
           <CCardHeader>
-            <strong>Customer </strong> <small>Tenant Users</small>
+            <strong>Invoices</strong> 
           </CCardHeader>
 
           <CCardBody>
@@ -117,4 +117,4 @@ const CustomerEdit = () => {
   )
 }
 
-export default CustomerEdit
+export default InvoicesEdit

@@ -1,15 +1,15 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
 import {
+  cilAddressBook,
   cilDollar,
+  cilGroup,
   cilInfo,
+  cilLockLocked,
   cilSettings,
-  cilSitemap,
   cilSpeedometer,
-  cilSpreadsheet,
-  cilViewColumn,
 } from '@coreui/icons'
-import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+import { CNavItem, CNavTitle } from '@coreui/react'
 
 const _nav = [
   {
@@ -27,72 +27,38 @@ const _nav = [
     name: 'Admin',
   },
   {
-    component: CNavGroup,
-    name: 'Customers',
-    to: '/base',
-    icon: <CIcon icon={cilSitemap} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Tenants',
-        to: '/base/cards',
-      },
-      {
-        component: CNavItem,
-        name: 'Tenant Users',
-        to: '/base/accordion',
-      },
-      {
-        component: CNavItem,
-        name: 'Tenant Licenses',
-        to: '/base/breadcrumbs',
-      }
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: 'Bills',
-    icon: <CIcon icon={cilDollar} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Bills',
-        to: '/forms/floating-labels',
-      },
-      {
-        component: CNavItem,
-        name: 'Payments',
-        to: '/forms/checks-radios',
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: 'Settings',
-    icon: <CIcon icon={cilSettings} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Users',
-        to: '/forms/floating-labels',
-      },
-    ],
-  },
-  {
     component: CNavItem,
     name: 'Customers',
     to: '/customers',
-    icon: <CIcon icon={cilSitemap} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilAddressBook} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Licenses',
+    to: '/licenses',
+    icon: <CIcon icon={cilLockLocked} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Invoices',
+    to: '/invoices',
+    icon: <CIcon icon={cilDollar} customClassName="nav-icon" />
+  },
+  {
+    component: CNavItem,
+    name: 'Users',
+    to: '/users',
+    icon: <CIcon icon={cilGroup} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavTitle,
+    name: 'Outhers',
   },
   {
     component: CNavItem,
     name: 'Settings',
     to: '/settings',
     icon: <CIcon icon={cilSettings} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavTitle,
-    name: 'Outhers',
   },
   {
     component: CNavItem,

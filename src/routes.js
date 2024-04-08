@@ -12,6 +12,22 @@ const Setting = React.lazy(() => import('./views/settings/Settings'))
 //About
 const About = React.lazy(() => import('./views/about/About'))
 
+//About
+const Licenses = React.lazy(() => import('./views/licenses/Licenses'))
+const LicensesEdit = React.lazy(() => import('./views/licenses/edit/LicensesEdit'))
+
+//Invoices
+const Invoices = React.lazy(() => import('./views/invoices/Invoices'))
+const InvoicesEdit = React.lazy(() => import('./views/invoices/edit/InvoicesEdit'))
+
+//Users
+const Users = React.lazy(() => import('./views/users/Users'))
+const UsersEdit = React.lazy(() => import('./views/users/edit/UsersEdit'))
+
+//Users
+const UsersAdmin = React.lazy(() => import('./views/users-admin/UsersAdmin'))
+const UsersAdminEdit = React.lazy(() => import('./views/users-admin/edit/UsersAdminEdit'))
+
 
 
 const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
@@ -26,22 +42,14 @@ const Placeholders = React.lazy(() => import('./views/base/placeholders/Placehol
 const Popovers = React.lazy(() => import('./views/base/popovers/Popovers'))
 const Progress = React.lazy(() => import('./views/base/progress/Progress'))
 const Spinners = React.lazy(() => import('./views/base/spinners/Spinners'))
-
 const Tooltips = React.lazy(() => import('./views/base/tooltips/Tooltips'))
-
-
-
-
 // Buttons
 const Buttons = React.lazy(() => import('./views/buttons/buttons/Buttons'))
 const ButtonGroups = React.lazy(() => import('./views/buttons/button-groups/ButtonGroups'))
 const Dropdowns = React.lazy(() => import('./views/buttons/dropdowns/Dropdowns'))
-
-
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
-
 //Forms
 const ChecksRadios = React.lazy(() => import('./views/forms/checks-radios/ChecksRadios'))
 const FloatingLabels = React.lazy(() => import('./views/forms/floating-labels/FloatingLabels'))
@@ -51,27 +59,22 @@ const Layout = React.lazy(() => import('./views/forms/layout/Layout'))
 const Range = React.lazy(() => import('./views/forms/range/Range'))
 const Select = React.lazy(() => import('./views/forms/select/Select'))
 const Validation = React.lazy(() => import('./views/forms/validation/Validation'))
-
-
 const Charts = React.lazy(() => import('./views/charts/Charts'))
-
 // Icons
 const CoreUIIcons = React.lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'))
 const Flags = React.lazy(() => import('./views/icons/flags/Flags'))
 const Brands = React.lazy(() => import('./views/icons/brands/Brands'))
-
 // Notifications
 const Alerts = React.lazy(() => import('./views/notifications/alerts/Alerts'))
 const Badges = React.lazy(() => import('./views/notifications/badges/Badges'))
 const Modals = React.lazy(() => import('./views/notifications/modals/Modals'))
 const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
-
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
 const routes = [
+  //Dashboard
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
-
 
   //Customers
   { path: '/customers', name: 'Customers', element: Customers },
@@ -82,6 +85,22 @@ const routes = [
 
   //About
   { path: '/about', name: 'About', element: About },
+
+  //Licenses
+  { path: '/licenses', name: 'Licenses', element: Licenses },
+  { path: '/licenses/edit', name: 'Edit', element: LicensesEdit },
+
+  //Invoices
+  { path: '/invoices', name: 'Invoices', element: Invoices },
+  { path: '/invoices/edit', name: 'Edit', element: InvoicesEdit },
+
+  //Users
+  { path: '/users', name: 'Users', element: Users },
+  { path: '/users/edit', name: 'Edit', element: UsersEdit },
+
+  //Users Admin
+  { path: '/users-admin', name: 'Users', element: UsersAdmin },
+  { path: '/users-admin/edit', name: 'Edit', element: UsersAdminEdit },
 
 
 
